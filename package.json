@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.0.20",
-    "@ffprobe-installer/ffprobe": "^1.1.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
     "aws-sdk": "^2.933.0",
     "body-parser": "^1.19.0",
     "connect-timeout": "^1.9.0",
@@ -36,7 +36,8 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "debug": "git commit -am\"debugging\" && git push"
+    "debug": "git commit -am\"debugging\" && git push",
+    "postinstall": "node install-ffmpeg.js"
   },
   "keywords": [],
   "author": "",
