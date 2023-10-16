@@ -28,7 +28,9 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+app.use(cors({
+	origin: '*'
+  }));
 
 app.use('/', movieRouter);
 app.use('/video_converted', VideoRouter);
